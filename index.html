@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Zodiac</title>
+    <title>Pokémon Zodiac</title>
     <!-- Link to Google Fonts -->
+    <!-- Link to normalizing CSS-->
+    <link href="normalize.css" rel="normalize" type="text/css">
     <!-- Link CSS-->
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
@@ -18,8 +20,20 @@
             <div class="help"></div>
                 <!--<img class="help_button" src="" width="" alt="pikachu holding a help sign with further instructions">-->
         </header>
-        <!-- Title and Calendar Input -->
-        <div class="title_and_calendar">
+        <!-- Title -->
+        <div class="title">
+            <h1>Which Pokémon are You?</h1>
+        </div>
+        <!-- Calendar Input-->
+        <div class="calendar_input">
+            <!--Text -->
+            <div class="enter_your_bday">
+                <p>Enter your Birthday</p>
+            </div>
+            <!-- Calendar -->
+            <div class="calendar">
+                <input class="calendar_dropdown" type="date" id="calendar_dropdown" required>
+            </div>
         </div>
         <footer></footer> 
     </div>
