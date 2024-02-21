@@ -1,4 +1,4 @@
-/*if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
+if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
   astrological_sign = 'Capricorn'
 } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
   astrological_sign = 'Sagittarius'
