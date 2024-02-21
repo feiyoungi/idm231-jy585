@@ -33,6 +33,7 @@ div {
     display: block;
 }
 
+/* change color of background for more contrast */
 body {
-    background-color: #ff2a2a;
+    background-color: #ff0000;
 }
