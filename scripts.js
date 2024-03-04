@@ -1,3 +1,4 @@
+//zodiac calendar function 
 if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
   astrological_sign = 'Capricorn'
 } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
@@ -23,3 +24,12 @@ if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
 } else if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
   astrological_sign = 'Aquarius'
 }
+
+//zodiac buttons 
+const charizard = document.getElementById('charizard')
+
+charizard.addEventListener('click', function () {
+  popup.style.visibility = 'visible';
+  title.innerHTML='charizard';
+  img.src=''
+});
