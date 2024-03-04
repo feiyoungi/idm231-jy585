@@ -43,6 +43,8 @@
     text-align: center;
 }
 
+
+
 div {
     display: block;
 }
@@ -77,6 +79,7 @@ body {
     background-repeat: no-repeat;
 }
 
+/* the pokeball looks kind of weird*/
 .pokemon-buttons button:hover {
     background-image: url('images/pokeball-min.png');
     background-size: 500px;
