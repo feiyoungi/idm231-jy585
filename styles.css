@@ -84,6 +84,7 @@ body {
     background-image: url('images/pokeball-min.png');
     background-size: 500px;
     transform: scale(1.5);
+    display:flex;
 }
 
 footer { 
