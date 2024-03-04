@@ -82,7 +82,7 @@ body {
 /* the pokeball looks kind of weird*/
 .pokemon-buttons button:hover {
     background-image: url('images/pokeball-min.png');
-    background-size: 500px;
+    background-size: 100px;
     transform: scale(1.5);
     display:flex;
 }
