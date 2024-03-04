@@ -26,10 +26,15 @@ if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
 }
 
 //zodiac buttons 
+var charizard = document.getElementById("charizard")
 const charizard = document.getElementById('charizard')
 
 charizard.addEventListener('click', function () {
   popup.style.visibility = 'visible';
   title.innerHTML='charizard';
-  img.src=''
+  img.src='images/charizard-min.png'
+  date.innerHTML='Februrary 19 - March 20';
+  desc.innerHTML='You are confident and ambitious, and you set the trail ablaze behind you wherever you go. You may be occasionally impatient and stubborn- you’re not exactly everyone’s cup of tea- but you are warm-hearted nonetheless.';
+  audio.src='';
+  audio.play();
 });
