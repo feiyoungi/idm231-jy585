@@ -18,8 +18,6 @@
     box-sizing: border-box;
 }
 
-/* header */ 
-
 /* main body */
 
 /* what is wrong with the text stroke?*/ 
@@ -33,6 +31,16 @@
     text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
+}
+
+.enter-your-bday { 
+    font-family: poppins;
+    font-size: 1.25em;
+    color: #fefaf6;
+    line-height: 1;
+    font-weight: 550;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 div {
@@ -53,6 +61,28 @@ body {
 }
 
 .pokemon-buttons img { 
-    max-width: 175px;
+    max-width: 178px;
     align-self: center;
+}
+
+.pokemon-buttons button {
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    background-color: inherit;
+    appearance: none;
+    transition: .2s ease-in-out;
+    background-position: center;
+    background-size: 80% 80%; 
+    background-repeat: no-repeat;
+}
+
+.pokemon-buttons button:hover {
+    background-image: url('images/pokeball-min.png');
+    background-size: 500px;
+    transform: scale(1.5);
+}
+
+footer { 
+    padding: 20px 5px;
 }
