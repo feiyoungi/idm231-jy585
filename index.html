@@ -31,7 +31,7 @@
         <div class="calendar-input">
             <!--Text -->
             <div class="enter-your-bday">
-                <p>Enter your Birthday</p>
+                <p>Enter Your Birthday</p>
             </div>
             <!-- Calendar -->
             <div class="calendar">
@@ -44,10 +44,24 @@
             <!--Add buttons through JS? -->
             <!--Add images-->
             <div>
-                <button id="charizard">
+                <button id="charizard-open">
                     <img src="/images/mega_char-min.png" alt="charizard">
                 </button>
             </div>
+            <dialog class="modal" id="modal">
+                <h2>It's Charizard!</h2>
+                <p>You are confident and ambitious, and you set the trail ablaze behind you wherever you go. You may be occasionally impatient and stubborn- you’re not exactly everyone’s cup of tea- but you are warm-hearted nonetheless.</p>
+                <button class="charizard-close">close modal</button>
+            </dialog>
+            <!--
+            <div class="modal" id="modal">
+                <div class="modal-inner">
+                    <h2>Charizard</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nam praesentium commodi est quam quo repudiandae veritatis laboriosam similique explicabo, incidunt dolores ratione accusamus iste, laborum sunt voluptate. Iste.</p>
+                    <button id="closeModal">&times</button>
+                </div>
+            </div>
+            -->
             <div>
                 <button id="snorlax">
                     <img src="/images/snorlax-min.png" alt="snorlax">
@@ -104,6 +118,7 @@
                 </button>
             </div>
         </div>
+    
         <footer class="footer">
             <!-- Links to Portfolio and includes Contacts -->
             <h2>Project by Fei Young</h2>
@@ -113,6 +128,6 @@
     </div>
 
     <!--Link Javascript-->
-    <script defer src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

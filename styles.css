@@ -34,17 +34,17 @@
 }
 
 .enter-your-bday { 
+    margin-top: 10px;
     font-family: poppins;
     font-size: 1.25em;
     color: #fefaf6;
-    line-height: 1;
     font-weight: 550;
     margin-bottom: 10px;
     text-align: center;
 }
 
 .calendar { 
-    margin: 0 auto;
+    margin-top: 10px;
 }
 
 input { 
@@ -61,8 +61,6 @@ input {
     display: block; 
     margin: 0 auto; 
     width: auto;
-    
-   
 }
 
 div {
@@ -102,11 +100,110 @@ body {
 /* the pokeball looks kind of weird*/
 .pokemon-buttons button:hover {
     background-image: url('images/pokeball-min.png');
-    background-size: 100px;
+    background-size: 170px;
     transform: scale(1.5);
     display:flex;
 }
 
 footer { 
     padding: 20px 5px;
+    font-family: Poppins;
+    color: #fefaf6;
 }
+
+/*pop up
+
+.modal {
+    background-color: #ffcb05;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    transition: all .2s ease-in-out;
+    z-index: -1;
+
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.modal-inner { 
+    background-color: #fefaf6;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    padding: 15px 25px;
+    text-align: center; 
+    width: 380px; 
+}
+
+.modal-inner h2 {
+    margin:0;
+}
+
+.modal-inner p { 
+    line-height: 24px;
+    margin: 10px 0;
+}
+
+*/
+
+.modal {
+    padding: 1em;
+    max-width: 50ch;
+    border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+  
+    & > * {
+      margin: 0 0 0.5rem 0;
+    }
+  }
+  
+  .modal::backdrop {
+    background: rgb(0 0 0 / 0.4);
+  }
+  
+  /* extra styling */
+  
+  body {
+    min-height: 100vh;
+    margin: 2rem;
+    font-family: system-ui;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--gray-8);
+    
+    background-size: cover;
+  }
+  
+  h1 em {
+    color: var(--cyan-9);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+  
+  .button {
+    border: 0;
+    cursor: pointer;
+    background: var(--gray-8);
+    color: var(--gray-2);
+    font-weight: 700;
+    padding: var(--size-2) var(--size-4);
+  }
+  
+  .button:hover,
+  .button:focus {
+    background: var(--cyan-9);
+  }
+  
+  form {
+    display: grid;
+    gap: 1em;
+  }
+  

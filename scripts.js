@@ -25,16 +25,27 @@ if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
   astrological_sign = 'Aquarius'
 }
 
-//zodiac buttons 
-var charizard = document.getElementById("charizard")
-const charizard = document.getElementById('charizard')
+/*const openBtn = document.getElementById ("openModal");
+const closeBtn = document.getElementById("closeModal");
+const modal = document.getElementById ("modal")
 
-charizard.addEventListener('click', function () {
-  popup.style.visibility = 'visible';
-  title.innerHTML='charizard';
-  img.src='images/charizard-min.png'
-  date.innerHTML='Februrary 19 - March 20';
-  desc.innerHTML='You are confident and ambitious, and you set the trail ablaze behind you wherever you go. You may be occasionally impatient and stubborn- you’re not exactly everyone’s cup of tea- but you are warm-hearted nonetheless.';
-  audio.src='';
-  audio.play();
+openBtn.addEventListener("click", ()=> {
+  modal.classList.add("open");
+});
+
+closeBtn.addEventListener("click", ()=> {
+  modal.classList.remove("open");
+})*/
+const charizard = document.getElementById('charizard-open');
+
+const modal = document.querySelector("#modal");
+const openModal = document.querySelector(".charizard-open");
+const closeModal = document.querySelector(".charizard-close");
+
+openModal.addEventListener("click", () => {
+  modal.showModal();
+});
+
+closeModal.addEventListener("click", () => {
+  modal.close();
 });
