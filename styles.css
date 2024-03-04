@@ -18,15 +18,21 @@
     box-sizing: border-box;
 }
 
+/* header */ 
+
 /* main body */
+
 /* what is wrong with the text stroke?*/ 
+
 .title {
     font-family: "Pokemon_Solid";
     letter-spacing:.4cap;
     color: #ffcb05;
     -webkit-text-stroke: 2px #2a75bb;
     stroke: 2px #2a75bb;
-    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);z
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
 }
 
 div {
@@ -36,4 +42,17 @@ div {
 /* change color of background for more contrast */
 body {
     background-color: #ff0000;
+}
+
+/* buttons */ 
+.pokemon-buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    margin: 0 50px;
+}
+
+.pokemon-buttons img { 
+    max-width: 175px;
+    align-self: center;
 }
