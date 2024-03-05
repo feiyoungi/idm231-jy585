@@ -132,7 +132,7 @@ footer {
 /*modal*/
 
 .modal {
-    display: block;
+    display: none;
     position: absolute;
     z-index: 1;
     left: 0;
@@ -158,80 +158,27 @@ footer {
     font-family: Poppins;
 }
 
+.modal-text {
+    text-align: center;
+}
+
+.pokemon-image {
+    margin: 0% 25%}
+
 /* style for the close button */
 
 .close-button {
     border-radius: 25px;
     color: #fefaf6;
-    background-color: #ff0000;
+    background-color: #2a75bb;
     border: none;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    width: 50px;
+    width: 70px;
 }
 
-.close-button:hover,
-.close-button:focus {
+.close-button:hover {
     color: black;
 }
-
-
-
-
-
-
-
-
-
-/*
-.modal { 
-    position: fixed;
-    top: 50%; 
-    left 50%; 
-    transform: translate(-50%, -50%);
-    border-radius: 10px; 
-    z-index: 10; 
-    background-color: #ffcb05;
-    width: 500px; 
-    max-width: 80%;
-}
-
-.modal-header { 
-    padding: 10px 15px;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    border-bottom: 1 px solid black;
-}
-
-.modal-header .title { 
-    font-size: 1.23rem;
-    font-weight: bold; 
-}
-
-.modal-header .close-button { 
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.modal-body { 
-   padding: 10px 15px; 
-}
-
-#overlay {
-    position: fixed;
-    top: 0; 
-    left: 0; 
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-}
-
-*/

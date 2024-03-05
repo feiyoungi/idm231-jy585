@@ -4,11 +4,12 @@ const snorlaxButton = document.getElementById("snorlax-open");
 const closeModal = document.querySelector(".close-button");
 
 // Function to update modal content
+// Add audio
 
 function updateModalContent(title, description, imageSrc) {
   const modalTitle = modal.querySelector("h2");
   const modalDescription = modal.querySelector("p");
-  const modalImage = pokemon.querySelector(".pokemon-image");
+  const modalImage = modal.querySelector(".pokemon-image");
 
   modalTitle.textContent = title;
   modalDescription.textContent = description;
