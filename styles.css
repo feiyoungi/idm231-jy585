@@ -13,61 +13,80 @@
 /* all */ 
 
 * { 
+    box-sizing: border-box;
     margin: 0; 
     padding: 0; 
-    box-sizing: border-box;
 }
 
 /* main body */
 
-/* what is wrong with the text stroke?*/ 
-
 .title {
-    font-family: "Pokemon_Solid";
-    letter-spacing:.4cap;
     color: #ffcb05;
-    -webkit-text-stroke: 2px #2a75bb;
+    display: flex;
+    font-family: "Pokemon_Solid";
+    justify-content: center;
+    letter-spacing:.4cap;
     stroke: 2px #2a75bb;
     text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
+    -webkit-text-stroke: 2px #2a75bb;
 }
 
+/*calendar*/
+
 .enter-your-bday { 
-    margin-top: 10px;
+    color: #fefaf6;
     font-family: poppins;
     font-size: 1.25em;
-    color: #fefaf6;
     font-weight: 550;
     margin-bottom: 10px;
+    margin-top: 10px;
     text-align: center;
 }
 
 .calendar { 
     margin-top: 10px;
+    text-align: center
 }
 
 input { 
+    background-color: #ffcb05;
+    border: #2a75bb;
+    border-radius: 25px;
+    border-width: 10px;
+    border: 3px solid #2a75bb;
+    color: black;
+    display: inline-block; 
     font-family: Poppins;
     font-weight: 575;
     font-size:.9em;
-    color: black;
-    background-color: #ffcb05;
-    border-radius: 25px;
-    border: #2a75bb;
-    border-width: 10px;
-    border: 3px solid #2a75bb;
-    padding: 9px;
-    display: block; 
     margin: 0 auto; 
+    padding: 9px;
     width: auto;
 }
+
+.enter { 
+    background-color: #2a75bb;
+    border: none;
+    border-radius: 25px;
+    color: #fefaf6;
+    display: inline-block;
+    font-family: Poppins;
+    font-size: .9em;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 9px;
+    width: auto; 
+
+}
+
+/*flexbox*/
 
 div {
     display: block;
 }
 
 /* change color of background for more contrast */
+
 body {
     background-color: #ff0000;
 }
@@ -81,28 +100,27 @@ body {
 }
 
 .pokemon-buttons img { 
-    max-width: 178px;
     align-self: center;
+    max-width: 178px;
 }
 
 .pokemon-buttons button {
-    cursor: pointer;
-    margin: 10px;
-    border: none;
-    background-color: inherit;
     appearance: none;
-    transition: .2s ease-in-out;
     background-position: center;
     background-size: 80% 80%; 
     background-repeat: no-repeat;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    margin: 10px;
+    transition: .2s ease-in-out;
 }
 
-/* the pokeball looks kind of weird*/
 .pokemon-buttons button:hover {
     background-image: url('images/pokeball-min.png');
     background-size: 170px;
-    transform: scale(1.5);
     display:flex;
+    transform: scale(1.5);
 }
 
 footer { 
@@ -111,99 +129,109 @@ footer {
     color: #fefaf6;
 }
 
-/*pop up
+/*modal*/
 
 .modal {
-    background-color: #ffcb05;
-    opacity: 0;
-    position: fixed;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
     top: 0;
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    transition: all .2s ease-in-out;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
 
+/* style for the modal content */
+
+
+.modal-content {
+    border-radius: 25px;
+    background-color: #ffcb05;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #2a75bb;
+    border-width: 10px;
+    border: 5px solid #2a75bb;
+    width: 80%;
+    font-family: Poppins;
+}
+
+/* style for the close button */
+
+.close-button {
+    border-radius: 25px;
+    color: #fefaf6;
+    background-color: #ff0000;
+    border: none;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+/*
+.modal { 
+    position: fixed;
+    top: 50%; 
+    left 50%; 
+    transform: translate(-50%, -50%);
+    border-radius: 10px; 
+    z-index: 10; 
+    background-color: #ffcb05;
+    width: 500px; 
+    max-width: 80%;
+}
+
+.modal-header { 
+    padding: 10px 15px;
     display: flex; 
+    justify-content: space-between; 
     align-items: center;
-    justify-content: center;
+    border-bottom: 1 px solid black;
 }
 
-.modal.open {
-    opacity: 1;
-    z-index: 999;
+.modal-header .title { 
+    font-size: 1.23rem;
+    font-weight: bold; 
 }
 
-.modal-inner { 
-    background-color: #fefaf6;
-    border-radius: 5px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-    padding: 15px 25px;
-    text-align: center; 
-    width: 380px; 
+.modal-header .close-button { 
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
-.modal-inner h2 {
-    margin:0;
+.modal-body { 
+   padding: 10px 15px; 
 }
 
-.modal-inner p { 
-    line-height: 24px;
-    margin: 10px 0;
+#overlay {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
 }
 
 */
-
-.modal {
-    padding: 1em;
-    max-width: 50ch;
-    border: 0;
-    box-shadow: 0 0 1em rgb(0 0 0 / .3);
-  
-    & > * {
-      margin: 0 0 0.5rem 0;
-    }
-  }
-  
-  .modal::backdrop {
-    background: rgb(0 0 0 / 0.4);
-  }
-  
-  /* extra styling */
-  
-  body {
-    min-height: 100vh;
-    margin: 2rem;
-    font-family: system-ui;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    color: var(--gray-8);
-    
-    background-size: cover;
-  }
-  
-  h1 em {
-    color: var(--cyan-9);
-    text-decoration: underline;
-    text-underline-offset: 0.25em;
-  }
-  
-  .button {
-    border: 0;
-    cursor: pointer;
-    background: var(--gray-8);
-    color: var(--gray-2);
-    font-weight: 700;
-    padding: var(--size-2) var(--size-4);
-  }
-  
-  .button:hover,
-  .button:focus {
-    background: var(--cyan-9);
-  }
-  
-  form {
-    display: grid;
-    gap: 1em;
-  }
-  

@@ -14,19 +14,21 @@
 </head>
 
 <body>
+    <!--Header-->
     <div class="main">
         <header>
-            <!--Mute and unmute site-->
-            <div class="mute-unmute"></div>
-                <!--<img class="mute-unmute-button" src="" width="" alt="a volume on and off button">-->
+            <!--Interactive head-->
+            <div class="ash"></div>
             <!-- Help button-->
             <div class="help"></div>
                 <!--<img class="help-button" src="" width="" alt="pikachu holding a help sign with further instructions">-->
         </header>
+
         <!-- Title -->
         <div class="title">
             <h1>Who's that Pokémon?!</h1>
         </div>
+
         <!-- Calendar Input-->
         <div class="calendar-input">
             <!--Text -->
@@ -35,43 +37,54 @@
             </div>
             <!-- Calendar -->
             <div class="calendar">
-                <!-- might need to fix this -->
                 <input class="calendar-dropdown" type="date" id="calendar-dropdown" required>
-                <button class="enter" id="enter"></button>
+                <button class="enter" id="enter">ENTER</button>
+            </div>
             </div>
         </div>
+
+        <!--Modal-->
+        <dialog class="modal" id="modal">
+            <div class="modal-content">
+              <img src="/images/mega_char-min.png" alt="Pokemon Image" class="pokemon-image" width="200">
+              <div class="modal-text">
+                <h2>Pokemon Name</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam provident in quo rerum accusantium quidem recusandae, tenetur hic modi repudiandae, repellendus ipsum, beatae at exercitationem laboriosam rem neque. Fuga, architecto.</p>
+              </div>
+              <button class="button close-button">&times;</button>
+            </div>
+        </dialog>
+
+        <!--Pokemon buttons-->
         <div class="pokemon-buttons">
-            <!--Add buttons through JS? -->
-            <!--Add images-->
             <div>
-                <button id="charizard-open">
+                <button class="button open-button" id="charizard-open">
                     <img src="/images/mega_char-min.png" alt="charizard">
                 </button>
             </div>
-            <dialog class="modal" id="modal">
-                <h2>It's Charizard!</h2>
-                <p>You are confident and ambitious, and you set the trail ablaze behind you wherever you go. You may be occasionally impatient and stubborn- you’re not exactly everyone’s cup of tea- but you are warm-hearted nonetheless.</p>
-                <button class="charizard-close">close modal</button>
-            </dialog>
-            <!--
-            <div class="modal" id="modal">
-                <div class="modal-inner">
-                    <h2>Charizard</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nam praesentium commodi est quam quo repudiandae veritatis laboriosam similique explicabo, incidunt dolores ratione accusamus iste, laborum sunt voluptate. Iste.</p>
-                    <button id="closeModal">&times</button>
+            
+            <!--<div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="modal-title">Pokemon Name</div>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="modal body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis deleniti voluptatum, facilis unde a nam. Consequatur ipsa error sint quibusdam animi repudiandae earum ex, numquam voluptatibus dolor reprehenderit placeat eos.
                 </div>
             </div>
-            -->
+            <div id="overlay"></div>-->
+
             <div>
-                <button id="snorlax">
+                <button class="button open-button" id="snorlax-open">
                     <img src="/images/snorlax-min.png" alt="snorlax">
                 </button>
             </div>
             <div>
-                <button id="ditto">
+                <button class="button open-button" id="ditto-open">
                     <img src="/images/ditto-min.png" alt="ditto">
                 </button>
             </div>
+            <!--unchanged for now-->
             <div>
                 <button id="toegepi">
                     <img src="/images/toegepi-min.png" alt="toegepi">
@@ -121,12 +134,12 @@
     
         <footer class="footer">
             <!-- Links to Portfolio and includes Contacts -->
-            <h2>Project by Fei Young</h2>
+            <h4>Project by Fei Young</h4>
             <!--<h3>Check out my other works!</h3>-->
             <!-- Include a link here -->
         </footer> 
     </div>
-
+    
     <!--Link Javascript-->
     <script src="script.js"></script>
 </body>
