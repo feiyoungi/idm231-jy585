@@ -17,11 +17,22 @@
     <!--Header-->
     <div class="main">
         <header>
-            <!--Interactive head-->
-            <div class="ash"></div>
             <!-- Help button-->
-            <div class="help"></div>
-                <!--<img class="help-button" src="" width="" alt="pikachu holding a help sign with further instructions">-->
+            <div class="help-button">
+                <button id="open">
+                ?
+                </button>
+            </div>
+            
+            <div class="help-modal-container" id="help-modal-container">
+                <div class="help-modal">
+                    <h1>HELLO</h1>
+                    <p>here is how to do it </p>
+                    <button id="close">
+                        &times;
+                    </button>
+                </div>
+            </div> 
         </header>
 
         <!-- Title -->
@@ -39,7 +50,6 @@
             <div class="calendar">
                 <input class="calendar-dropdown" type="date" id="calendar-dropdown" required>
                 <button class="enter" id="enter">ENTER</button>
-            </div>
             </div>
         </div>
 

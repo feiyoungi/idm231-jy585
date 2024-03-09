@@ -22,6 +22,7 @@ charizardButton.addEventListener("click", () => {
     const title = "Charizard";
     const description = "You are confident and ambitious, and you set the trail ablaze behind you wherever you go. You may be occasionally impatient and stubborn- you’re not exactly everyone’s cup of tea- but you are warm-hearted nonetheless.";
     const imageSrc = "/images/mega_char-min.png";
+    console.log("button-click");
 
     updateModalContent(title, description, imageSrc);
     modal.setAttribute('open', 'true'); // Open modal
