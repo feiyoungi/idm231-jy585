@@ -1,5 +1,4 @@
 /* fonts */
-
 @font-face {
     font-family: "Pokemon_Hollow";
     src: url(fonts/Pokemon\ Hollow.ttf);
@@ -11,7 +10,6 @@
 }
 
 /* all */ 
-
 * { 
     box-sizing: border-box;
     margin: 0; 
@@ -19,10 +17,6 @@
 }
 
 /* help modal */ 
-.help-modal-container {
-    display:none;
-}
-
 .help-button { 
     padding: 10px;
 }
@@ -47,18 +41,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0; /*pay attention to this for JS*/
+    pointer-events: none; /* cant i just do smth w visability*/
+}
+
+.help-modal-container.show { 
+    opacity:1;
+    pointer-events: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
 }
 
 .help-modal { 
     background-color: #ffcb05;
+    border: 3px solid #2a75bb;
     width: 600px;
     max-width: 100%;
     padding: 30px 50px; 
     border-radius: 25px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
-/* main body */
 
+.help-modal h1 {
+    margin: 0;
+    font-family: "Pokemon_Solid";
+    stroke: 2px #2a75bb;
+    -webkit-text-stroke: 2px #2a75bb;
+    color: #ffcb05;
+    letter-spacing:.3cap;
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+.help-modal p { 
+    opacity: 0.7;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+.help-modal button { 
+    background-color: #2a75bb;
+    border: none;
+    border-radius: 25px;
+    color: #fefaf6;
+    font-family: Poppins;
+    font-size: .9em;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 9px;
+    width: auto; 
+}
+
+/* main body */
 .title {
     color: #ffcb05;
     display: flex;
@@ -71,7 +111,6 @@
 }
 
 /*calendar*/
-
 .enter-your-bday { 
     color: #fefaf6;
     font-family: poppins;
@@ -162,11 +201,7 @@ body {
     transform: scale(1.5);
 }
 
-footer { 
-    padding: 20px 5px;
-    font-family: Poppins;
-    color: #fefaf6;
-}
+
 
 /*modal*/
 
