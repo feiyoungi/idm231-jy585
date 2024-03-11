@@ -32,7 +32,7 @@ closeModal.addEventListener("click", () => {
 });
 
 //to customize the modal
-function customizeModal(title, content, imageURL) {
+function customizeModal(title, content, imageUrl) {
     modalTitle.textContent = title;
     modalContent.forEach((p, index) => {
         p.textContent = content[index];
@@ -52,14 +52,14 @@ openButtons.forEach(button => {
         if (button.id === "charizard") {
             title = "It's Charizard!";
             content = ["You are confident and ambitious, and you set the trail ablaze behind you wherever you go. You may be occasionally impatient and stubborn- you’re not exactly everyone’s cup of tea- but you are warm-hearted nonetheless."];
-            imageUrl = "/images/charizard.jpg";
+            imageUrl = "/images/mega_char-min.png";
         } else if (button.id === "snorlax") {
             title = "Snorlax";
             content = ["Snorlax is a Normal-type Pokémon.", "It is known for its huge appetite and sleeping habit."];
         }
         
         // customize modal content
-        customizeModal(title, content);
+        customizeModal(title, content, imageUrl);
         
         // open the modal
         openModal();
