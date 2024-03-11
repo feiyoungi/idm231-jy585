@@ -41,8 +41,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /*pay attention to this for JS*/
-    pointer-events: none; /* cant i just do smth w visability*/
+    opacity: 0;
+    pointer-events: none;
 }
 
 .help-modal-container.show { 
@@ -110,6 +110,14 @@
     -webkit-text-stroke: 2px #2a75bb;
 }
 
+div {
+    display: block;
+}
+
+body {
+    background-color: #ff0000;
+}
+
 /*calendar*/
 .enter-your-bday { 
     color: #fefaf6;
@@ -157,18 +165,6 @@ input {
 
 }
 
-/*flexbox*/
-
-div {
-    display: block;
-}
-
-/* change color of background for more contrast */
-
-body {
-    background-color: #ff0000;
-}
-
 /* buttons */ 
 .pokemon-buttons {
     display: grid;
@@ -201,12 +197,9 @@ body {
     transform: scale(1.5);
 }
 
-
-
-/*modal*/
-
+/*
 .modal {
-    display: none;
+    display: block;
     position: absolute;
     z-index: 1;
     left: 0;
@@ -215,12 +208,30 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
 }
 
-/* style for the modal content */
+*/
 
+.modal {
+    display: ;
+    padding: 1em;
+    max-width: 50ch;
+    border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    
+  
+    & > * {
+      margin: 0 0 0.5rem 0;
+    }
+  }
+  
+  .modal::backdrop {
+    background: rgb(0 0 0 / 0.4);''
+  }
 
-.modal-content {
+  .modal-content {
     border-radius: 25px;
     background-color: #ffcb05;
     margin: 15% auto;
@@ -240,18 +251,18 @@ body {
     margin: 0% 25%
 }
 
-/* style for the close button */
-
 .close-button {
-    border-radius: 25px;
-    color: #fefaf6;
     background-color: #2a75bb;
     border: none;
+    border-radius: 25px;
+    color: #fefaf6;
+    font-family: Poppins;
+    font-size: .9em;
+    font-weight: 600;
+    padding: 9px;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
     cursor: pointer;
-    width: 70px;
+    width: auto;
 }
 
 .close-button:hover {
