@@ -128,3 +128,9 @@ closeButton.addEventListener("click", closeModal);
 // calling the customized modal 
 customizeModal("New Title", ["New content paragraph 1", "New content paragraph 2"], "path/to/your/image.jpg");
 
+//calendar 
+//const submit = document.querySelector('.enter');
+//const dateInput = document.querySelector('.calendar-dropdown');
+//const popup = document.getElementById('modal');
+//const closeBtn = document.querySelector('.close-button');
+

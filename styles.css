@@ -215,13 +215,16 @@ input {
 */
 
 .modal {
-    display: ;
+
     position: absolute;
     padding: 1em;
     max-width: 50ch;
     border: 0;
     background-color: rgba(0,0,0,0.5);
     align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   
   .modal::backdrop {
