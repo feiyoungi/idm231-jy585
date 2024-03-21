@@ -61,6 +61,7 @@
 }
 
 .help-modal { 
+    position: relative;
     background-color: #ffcb05;
     border: 3px solid #2a75bb;
     width: 600px;
@@ -78,8 +79,7 @@
     -webkit-text-stroke: 2px #2a75bb;
     color: #ffcb05;
     letter-spacing:.3cap;
-    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
-    
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .help-modal p { 
@@ -91,14 +91,21 @@
 .help-modal button { 
     background-color: #2a75bb;
     border: none;
-    border-radius: 25px;
+    border-radius: 50px;
     color: #fefaf6;
     font-family: Poppins;
     font-size: .9em;
     font-weight: 600;
-    margin-top: 10px;
     padding: 9px;
-    width: auto; 
+    width: 50px; 
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.help-modal button:hover {
+    color: black;
 }
 
 /* main body */
@@ -170,6 +177,10 @@ input {
     padding: 9px;
     width: auto; 
 
+}
+
+.calendar button:hover {
+    color: black;
 }
 
 /* buttons */ 
