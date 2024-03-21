@@ -216,13 +216,14 @@ input {
     height:100vh;
     width:100vw;
     overflow: hidden;
-  }
-  
-  .modal::backdrop {
-    background: rgb(0 0 0 / 0.4);
-  }
+}
 
-  .modal-content {
+.modal::backdrop {
+    background: rgb(0 0 0 / 0.4);
+}
+
+.modal-content {
+    position: relative;
     border-radius: 25px;
     background-color: #ffcb05;
     margin: 15% auto;
@@ -234,11 +235,13 @@ input {
     height: 60%;
     font-family: Poppins;
     align-items: center;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .modal-text {
     text-align: center;
-    
 }
 
 .modal-text h2 { 

@@ -16,7 +16,7 @@ const modal = document.querySelector("#modal");
 const openButtons = document.querySelectorAll(".open-button");
 const closeModal = document.querySelector(".close-button");
 
-//for customization
+//for pokemon modal customization
 const modalTitle = modal.querySelector("h2");
 const modalContent = modal.querySelectorAll("p");
 const modalImage = modal.querySelector(".modal-image");
@@ -34,21 +34,21 @@ closeModal.addEventListener("click", () => {
 });
 
 //to customize the modal
-function customizeModal(title, content, imageUrl, date, audioUrl) {//audio
+function customizeModal(title, content, imageUrl, date, audioUrl) {
     modalTitle.textContent = title;
     modalDate.textContent = date;
     modalContent.forEach((p, index) => {
         p.textContent = content[index];
     modalImage.src = imageUrl;
     // Play the audio when the modal opens
-    playAudio(audioUrl);//audio
+    playAudio(audioUrl);
     });
 }
 
 //audio
-const audioElement = document.getElementById('audio');//audio
+const audioElement = document.getElementById('audio');
 
-// Function to play audio
+// function to play audio
 function playAudio(audioUrl) {
     audioElement.src = audioUrl;
     audioElement.play();
@@ -62,7 +62,7 @@ openButtons.forEach(button => {
         let content = ["Default content paragraph 1", "Default content paragraph 2"];
         let imageUrl = "default-image-url.jpg";
         let date = "Default date";
-        let audioUrl = ""; // Default empty audio URL
+        let audioUrl = "";
 
         // customization based on button IDs
         if (button.id === "charizard") {
@@ -154,6 +154,53 @@ closeButton.addEventListener("click", closeModal);
 customizeModal("New Title", ["New content paragraph 1", "New content paragraph 2"], "path/to/your/image.jpg");
 
 //calendar 
+
+// event listener for the ENTER button
+const enterButton = document.getElementById('enter');
+enterButton.addEventListener('click', () => {
+    // get the selected date from the calendar input
+    const selectedDate = new Date(document.getElementById('calendar-dropdown').value);
+    
+    // Extract month and day from the selected date
+    const month = selectedDate.getMonth() + 1; // Months are zero-indexed, so add 1
+    const day = selectedDate.getDate();
+
+    // Determine the astrological sign based on the selected date
+    let astrological_sign;
+    if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
+        astrological_sign = 'vaporeon';
+    } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
+        astrological_sign = 'squirtle';
+    } else if ((month === 10 && day >= 24) || (month === 11 && day <= 21)) {
+        astrological_sign = 'cubone';
+    } else if ((month === 9 && day >= 23) || (month === 10 && day <= 23)) {
+        astrological_sign = 'bulbasaur';
+    } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
+        astrological_sign = 'alakazam ';
+    } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
+        astrological_sign = 'arcanine';
+    } else if ((month === 6 && day >= 22) || (month === 7 && day <= 22)) {
+        astrological_sign = 'toegepi';
+    } else if ((month === 5 && day >= 21) || (month === 6 && day <= 21)) {
+        astrological_sign = 'ditto';
+    } else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
+        astrological_sign = 'snorlax';
+    } else if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
+        astrological_sign = 'charizard';
+    } else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
+        astrological_sign = 'jigglypuff';
+    } else if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
+        astrological_sign = 'mew';
+    }
+
+    // Open the corresponding Pokémon modal based on the astrological sign
+    const correspondingButton = document.getElementById(astrological_sign.toLowerCase());
+    setTimeout(() => {
+        correspondingButton.click(); // Simulate click on the corresponding Pokémon button
+    }, 100);
+    // correspondingButton.click(); // Simulate click on the corresponding Pokémon button
+});
+
 /*const enter = document.querySelector('.enter');
 const dateInput = document.querySelector('.calendar-dropdown');
 
