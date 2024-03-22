@@ -54,25 +54,118 @@ function playAudio(audioUrl) {
     audioElement.play();
 }
 
+//event listeners to open buttons
+openButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        // customize modal content based on button clicked
+        let title = "Default Title";
+        let content = ["Default content paragraph 1", "Default content paragraph 2"];
+        let imageUrl = "default-image-url.jpg";
+        let date = "Default date";
+        let audioUrl = "";
 
-//calendar
-const enterButton = document.querySelector('#enter');
-enterButton.addEventListener('click', getDate);
-
-function getDate() {
-    event.preventDefault();
-    const selectedDate = document.querySelector('#calendar-dropdown').value;
-    console.log(selectedDate);
-
-    const date = selectedDate.split("-");
-    console.log(date);
-
-    const month = Number(date[1]);
-    const day = Number(date[2]);
+        // customization based on button IDs
+        if (button.id === "charizard") {
+            title = "It's Charizard!";
+            content = ["You are confident and ambitious, and you set the trail ablaze behind you wherever you go. You may be occasionally impatient and stubborn- you’re not exactly everyone’s cup of tea- but you are warm-hearted nonetheless."];
+            imageUrl = "/images/mega_char-min.png";
+            date = "March 21 – April 19"
+            audioUrl = "/audios/charizard-audio.mp3";
+        } else if (button.id === "snorlax") {
+            title = "It's Snorlax!";
+            content = ["You are laidback and pragmatic. You take life one step at a time with a nap to compensate for every five or so steps. You can be quite lazy and keep mostly to yourself, but everyone loves how easy you are to get along with."];
+            imageUrl = "/images/snorlax-min.png";
+            date = "April 20 – May 20";
+            audioUrl = "/audios/snorlax-audio.mp3";
+        } else if (button.id === "ditto") {
+            title = "It's Ditto!";
+            content = ["You are curious and playful, and you bring a unique and uplifting energy to the room. Although you may seem a bit fickle and indecisive, at the end of the day, all you seek is to please. Be true to yourself."];
+            imageUrl = "/images/ditto-min.png";
+            date = "May 21 – June 20";
+            audioUrl = "/audios/ditto-audio.mp3";
+        } else if (button.id === "toegepi") {
+            title = "It's Toegepi!";
+            content = ["You are intuitive and emotional, and while others might see emotion as a weakness, it is your greatest strength. You are deeply attuned to your emotions, and thus, can spare the effort to help others with theirs. Be careful not to take on more than you can bite."];
+            imageUrl = "/images/toegepi-min.png";
+            date = "June 21 – July 22";
+            audioUrl = "/audios/toegepi-audio.mp3";
+        } else if (button.id === "arcanine") {
+            title = "It's Arcanine!";
+            content = ["You are magnetic and loyal. Your essence beckons for attention, after all, you’re a performer! Whether it is on stage or behind the scenes, you were born to shine. Remember not to get too caught up in the lights and share your charm with others."];
+            imageUrl = "/images/arcanine-min.png";
+            date = "July 23 – August 22";
+            audioUrl = "/audios/arcanine-audio.mp3";
+        } else if (button.id === "alakazam") {
+            title = "It's Alakazam!";
+            content = ["You are the world’s best older sibling, reliable and logical. People trust you to give honest, objective, and solid advice. You are constantly helping others grow. Allow yourself the same grace and don’t be so harsh on yourself."];
+            imageUrl = "/images/alakazam-min.png";
+            date = "August 23 – September 22";
+            audioUrl = "/audios/alakazam-audio.mp3";
+        } else if (button.id === "bulbasaur") {
+            title = "It's Bulbasaur!";
+            content = ["You are a well-balanced individual with a strong strive for harmony. People respect you for your ability to stand on business and dissolve conflict and disarray. While your diplomacy is admirable, have a little more trust in other people to resolve their own problems."];
+            imageUrl = "/images/bulbasaur2-min.png";
+            date = "September 23 – October 22";
+            audioUrl = "/audios/bulbasaur-audio.mp3";
+        } else if (button.id === "cubone") {
+            title = "It's Cubone!";
+            content = ["You are mysterious and ambitious. Your confidence and strive to always be the best version of yourself draws people in. You know exactly what you want and you go straight for it. Make sure you slow down and take some breaks!"];
+            imageUrl = "/images/cubone-min.png";
+            date = "October 23 – November 21";
+            audioUrl = "/audios/cubone-audio.mp3";
+        } else if (button.id === "squirtle") {
+            title = "It's Squirtle!";
+            content = ["You are exciting and brazen. Your authenticity and bravery are contagious, and you inspire others to go after the things that they want! Your rampant optimism can sometimes be a bit overwhelming for others, but it works perfectly for you."];
+            imageUrl = "/images/squirtle-min.png";
+            date = "November 22 – December 21";
+            audioUrl = "/audios/squirtle-audio.mp3";
+        } else if (button.id === "vaporeon") {
+            title = "It's Vaporeon!";
+            content = ["You are disciplined and grounded. You easily distinguish the line between fantasy and reality, and you help guide others back to the sweet spot between the two. Try not to take everything too seriously, the world will be just fine if you have some fun!"];
+            imageUrl = "/images/vaporeon-min.png";
+            date = "December 22 – January 19";
+            audioUrl = "/audios/vaporeon-audio.mp3";
+        } else if (button.id === "mew") {
+            title = "It's Mew!";
+            content = ["You are individualistic and philosophical. You ask the questions that others might avoid, and you embrace the weird and new. While your reclusive nature can drive others away, it also leaves a great air of intrigue around you."];
+            imageUrl = "/images/mew-min.png";
+            date = "January 20 - February 18";
+            audioUrl = "/audios/mew-audio.mp3";
+        } else if (button.id === "jigglypuff") {
+            title = "It's Jigglypuff!";
+            content = ["You are the gentle artists of the world, creative and healing with a great yearning for something bigger than yourself. As highly empathetic individuals, you find yourself as people’s safety net. Make sure you find yours too. It’s okay to ask for help."];
+            imageUrl = "/images/Jigglypuff-min.png";
+            date = "February 19 - March 20";
+            audioUrl = "/audios/jigglypuff-audio.mp3";
+        }
     
-    console.log(month);
-    console.log(day);
+        // customize modal content
+        customizeModal(title, content, imageUrl, date, audioUrl);
+        
+        // open the modal
+        openModal();
+    });
+});
 
+// event listener to close button
+closeButton.addEventListener("click", closeModal);
+
+// calling the customized modal 
+customizeModal("New Title", ["New content paragraph 1", "New content paragraph 2"], "path/to/your/image.jpg");
+
+//calendar 
+
+// event listener for the ENTER button
+const enterButton = document.getElementById('enter');
+enterButton.addEventListener('click', () => {
+    // get the selected date from the calendar input
+    const selectedDate = new Date(document.getElementById('calendar-dropdown').value);
+    
+    // Extract month and day from the selected date
+    const month = selectedDate.getMonth() + 1; // Months are zero-indexed, so add 1
+    const day = selectedDate.getDate();
+
+    // Determine the astrological sign based on the selected date
     let astrological_sign;
     if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
         astrological_sign = 'vaporeon';
@@ -100,100 +193,10 @@ function getDate() {
         astrological_sign = 'mew';
     }
 
-    console.log(astrological_sign);
-
-}
-
-
-//event listeners to open buttons
-openButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        // customize modal content based on button clicked
-        let title = "Default Title";
-        let content = ["Default content paragraph 1", "Default content paragraph 2"];
-        let imageUrl = "default-image-url.jpg";
-        let date = "Default date";
-        let audioUrl = "";
-
-        // customization based on button IDs
-        if ((button.id === "charizard") || (astrological_sign = "charizard")){
-            title = "It's Charizard!";
-            content = ["You are confident and ambitious, and you set the trail ablaze behind you wherever you go. You may be occasionally impatient and stubborn- you’re not exactly everyone’s cup of tea- but you are warm-hearted nonetheless."];
-            imageUrl = "images/mega_char-min.png";
-            date = "March 21 – April 19"
-            audioUrl = "audios/charizard-audio.mp3";
-        } else if (button.id === "snorlax") {
-            title = "It's Snorlax!";
-            content = ["You are laidback and pragmatic. You take life one step at a time with a nap to compensate for every five or so steps. You can be quite lazy and keep mostly to yourself, but everyone loves how easy you are to get along with."];
-            imageUrl = "images/snorlax-min.png";
-            date = "April 20 – May 20";
-            audioUrl = "audios/snorlax-audio.mp3";
-        } else if (button.id === "ditto") {
-            title = "It's Ditto!";
-            content = ["You are curious and playful, and you bring a unique and uplifting energy to the room. Although you may seem a bit fickle and indecisive, at the end of the day, all you seek is to please. Be true to yourself."];
-            imageUrl = "images/ditto-min.png";
-            date = "May 21 – June 20";
-            audioUrl = "audios/ditto-audio.mp3";
-        } else if (button.id === "toegepi") {
-            title = "It's Toegepi!";
-            content = ["You are intuitive and emotional, and while others might see emotion as a weakness, it is your greatest strength. You are deeply attuned to your emotions, and thus, can spare the effort to help others with theirs. Be careful not to take on more than you can bite."];
-            imageUrl = "images/toegepi-min.png";
-            date = "June 21 – July 22";
-            audioUrl = "audios/toegepi-audio.mp3";
-        } else if (button.id === "arcanine") {
-            title = "It's Arcanine!";
-            content = ["You are magnetic and loyal. Your essence beckons for attention, after all, you’re a performer! Whether it is on stage or behind the scenes, you were born to shine. Remember not to get too caught up in the lights and share your charm with others."];
-            imageUrl = "images/arcanine-min.png";
-            date = "July 23 – August 22";
-            audioUrl = "audios/arcanine-audio.mp3";
-        } else if (button.id === "alakazam") {
-            title = "It's Alakazam!";
-            content = ["You are the world’s best older sibling, reliable and logical. People trust you to give honest, objective, and solid advice. You are constantly helping others grow. Allow yourself the same grace and don’t be so harsh on yourself."];
-            imageUrl = "images/alakazam-min.png";
-            date = "August 23 – September 22";
-            audioUrl = "audios/alakazam-audio.mp3";
-        } else if (button.id === "bulbasaur") {
-            title = "It's Bulbasaur!";
-            content = ["You are a well-balanced individual with a strong strive for harmony. People respect you for your ability to stand on business and dissolve conflict and disarray. While your diplomacy is admirable, have a little more trust in other people to resolve their own problems."];
-            imageUrl = "images/bulbasaur2-min.png";
-            date = "September 23 – October 22";
-            audioUrl = "audios/bulbasaur-audio.mp3";
-        } else if (button.id === "cubone") {
-            title = "It's Cubone!";
-            content = ["You are mysterious and ambitious. Your confidence and strive to always be the best version of yourself draws people in. You know exactly what you want and you go straight for it. Make sure you slow down and take some breaks!"];
-            imageUrl = "images/cubone-min.png";
-            date = "October 23 – November 21";
-            audioUrl = "audios/cubone-audio.mp3";
-        } else if (button.id === "squirtle") {
-            title = "It's Squirtle!";
-            content = ["You are exciting and brazen. Your authenticity and bravery are contagious, and you inspire others to go after the things that they want! Your rampant optimism can sometimes be a bit overwhelming for others, but it works perfectly for you."];
-            imageUrl = "images/squirtle-min.png";
-            date = "November 22 – December 21";
-            audioUrl = "audios/squirtle-audio.mp3";
-        } else if (button.id === "vaporeon") {
-            title = "It's Vaporeon!";
-            content = ["You are disciplined and grounded. You easily distinguish the line between fantasy and reality, and you help guide others back to the sweet spot between the two. Try not to take everything too seriously, the world will be just fine if you have some fun!"];
-            imageUrl = "images/vaporeon-min.png";
-            date = "December 22 – January 19";
-            audioUrl = "audios/vaporeon-audio.mp3";
-        } else if (button.id === "mew") {
-            title = "It's Mew!";
-            content = ["You are individualistic and philosophical. You ask the questions that others might avoid, and you embrace the weird and new. While your reclusive nature can drive others away, it also leaves a great air of intrigue around you."];
-            imageUrl = "images/mew-min.png";
-            date = "January 20 - February 18";
-            audioUrl = "audios/mew-audio.mp3";
-        } else if (button.id === "jigglypuff") {
-            title = "It's Jigglypuff!";
-            content = ["You are the gentle artists of the world, creative and healing with a great yearning for something bigger than yourself. As highly empathetic individuals, you find yourself as people’s safety net. Make sure you find yours too. It’s okay to ask for help."];
-            imageUrl = "images/Jigglypuff-min.png";
-            date = "February 19 - March 20";
-            audioUrl = "audios/jigglypuff-audio.mp3";
-        }
-    
-        // customize modal content
-        customizeModal(title, content, imageUrl, date, audioUrl);
-        
-        // open the modal
-        // openModal();
-    });
+    // Open the corresponding Pokémon modal based on the astrological sign
+    const correspondingButton = document.getElementById(astrological_sign.toLowerCase());
+    setTimeout(() => {
+        correspondingButton.click(); // Simulate click on the corresponding Pokémon button
+    }, 100);
+    // correspondingButton.click(); // Simulate click on the corresponding Pokémon button
 });
