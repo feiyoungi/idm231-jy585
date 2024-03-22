@@ -79,7 +79,7 @@
 .help-modal h1 {
     margin: 0;
     font-family: "Pokemon_Solid";
-    stroke: 2px #2a75bb;
+    /* stroke: 2px #2a75bb; */
     -webkit-text-stroke-width: 2px; 
     -webkit-text-stroke-color: #2a75bb;
     color: #ffcb05;
