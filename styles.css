@@ -124,7 +124,7 @@
     font-family: "Pokemon_Solid";
     justify-content: center;
     letter-spacing:.4cap;
-    stroke: 2px #2a75bb;
+    /* stroke: 2px #2a75bb; */
     text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
     -webkit-text-stroke-width: 2px; 
     -webkit-text-stroke-color: #2a75bb;
@@ -271,7 +271,7 @@ input {
 
 .modal-text h2 { 
     font-family: "Pokemon_Solid";
-    stroke: 2px #2a75bb;
+    /* stroke: 2px #2a75bb; */
     color: #ffcb05;
     -webkit-text-stroke-width: 2px; 
     -webkit-text-stroke-color: #2a75bb;
